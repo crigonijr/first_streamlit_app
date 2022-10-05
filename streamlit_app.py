@@ -1,5 +1,5 @@
 import streamlit
-
+import snowflake.connector
 streamlit.title('My Parents New Helthy Diner')
 
 streamlit.header('🥣 Breakfast Menu Lorena')
@@ -20,6 +20,6 @@ streamlit.dataframe(my_fruit_list)
 fruit_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado', 'Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
-import snowflake.connector
+
 # Display the table on the page.
 
